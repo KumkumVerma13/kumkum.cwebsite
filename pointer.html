@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>pointers</title>
+<style>
+body{
+background-color: #1E90FF;
+font-family:"georgia";
+}
+h1,h3{
+color:white;
+}
+p{
+color:white;
+font-size:24px;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align : center;"><u>Pointers</u></h1>
+<h3 style="text-align : center;"><u>Practice Questions</u></h3>
+<pre><p>
+<b>Question 1: Write a program a pointer should point the array and through pointer we will fill all the location of the array by asking the value from user and print the array</b>
+
+<u><b>Solution:</u></b>
+#include < stdio.h >
+
+int main() {
+    int arr[5];      
+    int *ptr;       
+    int i;
+
+    ptr = arr; 
+
+    printf("Enter 5 integers:\n");
+    for (i = 0; i < 5; i++) {
+        printf("Enter value for element %d: ", i);
+        scanf("%d", (ptr + i)); 
+    }
+    printf("\nThe elements in the array are:\n");
+    for (i = 0; i < 5; i++) {
+    printf("Element %d = %d\n", i, *(ptr + i));
+    }
+}
+
+<b>Question 2: Write a program in which we are having a 2-d array of 2*3, insert the value thorugh pointer and print the value</b>
+
+<u><b>Solution:</b></u>
+#include < stdio.h >
+
+int main() {
+    int arr[2][3];
+    
+    int *ptr = &arr[0][0];
+
+    printf("Enter 6 numbers:\n");
+    for (int i = 0; i < 6; i++) {
+        scanf("%d", (ptr + i));
+    }
+
+    ptr = &arr[0][0];
+
+    printf("\nThe 2D array elements are:\n");
+    for (int i = 0; i < 2; i++) 
+{     
+        for (int j = 0; j < 3; j++) 
+{ 
+            printf("%d ", *ptr);
+            ptr++;
+        }
+        printf("\n"); 
+    }
+}
+
+<b><u>Output</b></u>
+Enter 6 numbers:
+10
+20
+30
+40
+50
+60
+The 2D array elements are:
+10 20 30 
+40 50 60
+</p></pre>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<html>
+<head>
+<title>Operators</title>
+<style>
+body{
+background-color: #1E90FF;
+font-family:"georgia";
+}
+h1,h3{
+color:white;
+}
+p{
+color:white;
+font-size:24px;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align : center;"><u>Operators </u></h1>
+<h3 style="text-align : center;"><u>Practice Questions</u></h3>
+<pre>
+<p><b>Question 1: Write a program to show that example of pre-increment ?</b>
+
+<B><u>SOLUTION:</u></B>
+#include < stdio.h >
+void main(){
+   int x=10;
+    ++x;
+    printf("The value of x: %d" , x);
+}
+
+<B><u>OUTPUT:</u></B>
+The value of x: 11
+
+<b>Question 2: Write a program to show that example of post-increment ?</b>
+
+<B><u>SOLUTION: </u></b>
+#include < stdio.h >
+void main(){
+   int y;
+   int x=10;
+   y=x++; 
+   printf("The value of y: %d" , y);
+}
+
+<B><u>OUTPUT:</u></B>
+The value of y: 10
+
+<b>Question 3: Write a program to show that example of pre-decrement ?</b>
+
+<B><u>SOLUTION:</u></B>
+#include < stdio.h >
+void main() {
+  int num1 = 10;
+  int num2;
+  num2 = --num1;
+  printf("Value of num2: %d", num2);
+}
+
+<B><u>OUTPUT:</u></B>
+Value of num2: 9
+
+<b>Question 4: Write a program to show that example of post-decrement ?</b>
+
+<B><u>SOLUTION:</u></B>
+#include < stdio.h >
+void main() {
+   int num1 = 10;
+   int num2;
+   num2 = num1--;
+   printf("Value of num2: %d", num2);
+}
+
+<B><U>OUTPUT:</u></B>
+Value of num2: 10
+
+<b>Question 5: Write a program to enter 2 numbers from user add the number and show the answer , again take 2 number from user subtract the number display the answer ,again take 2 number from user multiply the number display the answer and ,again take 2 number from the user divide the number display the answer ,again take 2 number find the remainder and display the answer ?</b>
+
+<B><u>SOLUTION:</u></B>
+#include < stdio.h >
+int main() {
+   int num1, num2;
+   int sum, sub, rem, mul;
+   float div;
+
+    printf("Enter two number: "); 
+    scanf("%d", &num1);
+    scanf("%d", &num2);
+
+    sum = num1 + num2;
+    printf("\n Addition of two numbers=%d", sum);
+
+    sub = num1 - num2;
+    printf("\n Subtraction of two numbers=%d", sub); 
+
+    div = (float)num1 / num2;
+    printf("\n Division of two numbers= %f", div);
+
+    rem = num1 % num2;
+    printf("\n Remainder of two numbers= %d", rem);
+
+    mul = num1 * num2;
+    printf("\n Multiply of two numbers= %d", mul);
+}
+
+<B><u>OUTPUT:</u></B>
+Enter two number: 10 3
+
+ Addition of two numbers=13
+ Subtraction of two numbers=7
+ Division of two numbers= 3.333333
+ Remainder of two numbers= 1
+ Multiply of two numbers= 30
+
+<b>Question 6: Enter a number from user and find out cube of numbers ?</b>
+
+<B><u>OUTPUT:</u></B>
+#include < stdio.h >
+void  main() {
+    int number, cube;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    cube = number * number * number;
+    printf("The cube of %d is: %d\n", number, cube);
+}
+
+<B><u>OUTPUT:</u></B>
+Enter an integer number: 5
+The cube of 5 is: 125
+
+<b>Question 7: Enter a lower case character from user and print it into upper case ?</b>
+
+<B><u>SOLUTION:</u></B>
+#include < stdio.h >
+   void main() {
+   char lowerChar;
+   char upperChar;
+   printf("Enter a lowercase character: ");
+   scanf("%c", &lowerChar);
+
+    upperChar = lowerChar - 32;
+
+    printf("The uppercase character is: %c\n", upperChar);
+}
+
+<B><u>OUTPUT:</u></B>
+Enter a lowercase character: g
+The uppercase character is: G
+
+<b>Question 8: Enter marks of students and calculate average of student’s marks ?</b>
+
+<B><u>SOLUTION:</u></B>
+#include < stdio.h >
+
+int main() {
+    int n, i;
+    float marks, sum = 0, average;
+
+    printf("Enter the number of students: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        printf("Enter marks of student %d: ", i);
+        scanf("%f", &marks);
+        
+        sum = sum + marks;
+    }
+
+    average = sum / n;
+
+    printf("\nTotal Sum of Marks = %f\n", sum);
+    printf("Average Marks = %f\n", average);
+}
+
+<B><u>OUTPUT:</u></B>
+Enter the number of students: 3
+Enter marks of student 1: 85
+Enter marks of student 2: 90
+Enter marks of student 3: 78
+
+Total Sum of Marks = 253.00
+Average Marks = 84.33
+
+<b>Quesion 9: Calculate simple interest = (P x R x T)/ 100</b>
+
+<B><u>SOLUTION:</u></B>
+#include <stdio.h>
+
+int main() {
+    float principal, rate, time, simpleinterest;
+
+    printf("Enter Principal: ");
+    scanf("%f", &principal);
+
+    printf("Enter Rate : ");
+    scanf("%f", &rate);
+
+    printf("Enter Time : ");
+    scanf("%f", &time);
+
+    simpleinterest = (principal * rate * time) / 100;
+    printf("\nThe Simple Interest is: %f\n", simpleinterest);
+}
+
+<B><u>OUTPUT:</u>
+Enter Principal: 1000
+Enter Rate : 5
+Enter Time : 2
+
+The Simple Interest is: 100.00
+</pre>
+</body>
+</html>

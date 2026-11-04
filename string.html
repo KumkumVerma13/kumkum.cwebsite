@@ -1,0 +1,387 @@
+<html>
+<head>
+<title>Strings</title>
+<style>
+body{
+background-color: #1E90FF;
+font-family:"georgia";
+}
+h1,h3{
+color:white;
+}
+p{
+color:white;
+font-size:24px;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align : center;"><u>STRINGS</u></h1>
+<h3 style="text-align : center;"><u>Practice Questions</u></h3>
+<pre><p>
+<b>Question 1: Enter a string from user and convert in uppercase ?</b>
+
+<B><u>Solution</u><B>
+#include < stdio.h >
+int main() {
+    char str[100];
+    int i = 0;
+    printf("Enter a string: ");
+    scanf("%s", str);
+    
+    while (str[i] != '\0') {
+        if (str[i] >= 'a' && str[i] <= 'z') {
+            str[i] = str[i] - 32;
+        }  
+        i++;
+    }
+    printf("Uppercase string: %s\n", str);
+}
+
+<B><u>Output</u></B>
+Enter a string: hello world 123!
+Uppercase string: HELLO WORLD 123!
+
+<b>Question 2: Enter a string from user and convert into lowercase ?</b>
+
+<B><u>Solution</u></B>
+#include < stdio.h >
+int main() {
+    char str[100];
+    int i = 0;
+    printf("Enter a string: ");
+    scanf("%s",&str);
+
+    while (str[i] != '\0') {
+        if (str[i] >= 'A' && str[i] <= 'Z') {
+            str[i] = str[i] + 32;
+        }
+        i++;
+    }
+    printf("Lowercase string: %s", str);
+}
+
+<B><u>OUTPUT</u></B>
+Enter a string: HELLO WORLD 123!
+Lowercase string: hello world 123;
+
+<b>Quesstion 3: Enter a string from user and convert into toggle case ?</b>
+
+<B><u>SOLUTION</u></B>
+#include < stdio.h >
+int main() {
+    char str[100];
+    int i = 0;
+   printf("Enter a string: ");
+    scanf("%s", str); 
+    while (str[i] != '\0') {
+       
+        if (str[i] >= 'a' && str[i] <= 'z') {
+            str[i] = str[i] - 32;
+        }
+       else if (str[i] >= 'A' && str[i] <= 'Z') {
+            str[i] = str[i] + 32;
+        }
+        i++;
+    }
+    printf("Toggle case string: %s\n", str);
+}
+
+<B><u>OUTPUT</u></B>
+Enter a string: Hello World 123!
+Toggle case string: hELLO wORLD 123!
+
+<b>Question 4: Enter a string from user and final length of the string ?</b>
+
+<B><u>SOLUTION</u></B>
+#include < stdio.h >
+#include < string.h >
+int main() {
+   char str[100];
+    printf("Enter a string: ");
+    scanf("%s", str); 
+    int length = strlen(str);
+    printf("length of the string: %d\n", length);
+}
+
+<B><u>OUTPUT</u></B>
+Enter a string: Hello
+length of the string: 5
+
+<b>Question 5: Enter a string from user and compare those string ?</b>
+
+<B><u>SOLUTION</u></B>
+#include < stdio.h >
+#include < string.h >
+int main() {
+char str1[100];
+char str2[100];
+
+    printf("Enter the first string: ");
+    scanf("%s", str1);
+
+    printf("Enter the second string: ");
+    scanf("%s", str2);
+
+    int result = strcmp(str1, str2);
+    if (result == 0) {
+        printf("Both strings are equal.\n");
+    }
+}
+
+<B><u>OUTPUT</u></B>
+Enter the first string: bye
+Enter the second string: bye
+Both strings are equal.
+
+<b>Question 6: Enter a string from user and concatenate the string ?</b>
+
+<B><u>SOLUTION</u></B>
+#include < stdio.h >
+#include < string.h >
+
+int main() {
+   
+    char firstString[100];
+    char secondString[100];
+
+    printf("Enter the first string: ");
+    scanf("%s", firstString);
+
+    printf("Enter the second string: ");
+    scanf("%s", secondString);
+
+    strcat(firstString, secondString);
+
+    printf("Joined string: %s\n", firstString);
+}
+
+<B><u>OUTPUT</u></B>
+Enter the first string: Hello
+Enter the second string: World
+Joined string: HelloWorld
+
+<b>Question 7: Enter the string from user ,enter a number from user ,if the user enter 0 then you will print first character of string ,if the user enter 1 then you will print second character of string ,if user enter 2 then you will print third character of string ,if user enter 3 then you point fourth character of string and if out of string then you will print out of bound ?</b>
+
+<B><u>SOLUTION</u></B>
+#include < stdio.h >
+#include < string.h >
+
+int main() {
+    char str[100];
+    int index;
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    printf("Enter a number: ");
+    scanf("%d", &index);
+
+    int length = strlen(str);
+
+    if (index >= 0 && index < length) {
+        printf("Character at index %d is: %c\n", index, str[index]);
+    } else {
+        printf("Out of bound\n");
+    }
+}
+
+<B><u>OUTPUT</u></B>
+Enter a string: hello
+Enter a number: 1
+Character at index 1 is: e
+
+<b>Question 8: Enter the string from user and print each character in new line ?</b>
+
+<B><u>SOLUTION</u></B>
+#include < stdio.h >
+
+int main() {
+    char str[100];
+    int i = 0;
+
+    printf("Enter a string: ");
+    scanf("%s", str); 
+
+    while (str[i] != '\0') {
+        printf("%c\n", str[i]);
+        i++; 
+    }
+}
+
+<B><u>OUTPUT</u></B>
+Enter a string: Hello
+H
+e
+l
+l
+o
+
+<b>Question 9: Enter the string from user and copy reverse order into another string ?</b>
+
+<B><u>SOLUTION</u></B>
+#include < stdio.h >
+#include < string.h >
+
+int main() {
+    char str[100]; 
+    char reverse[100];
+    int i, j, length;
+
+    printf("Enter a string: ");
+    scanf("%s", str); 
+
+    length = strlen(str);
+    j = 0;
+    for (i = length - 1; i >= 0; i--) {
+        reverse[j] = str[i];
+        j++;
+    }
+    
+    reversed[j] = '\0'; 
+    printf("Reversed string: %s\n", reverse);
+}
+
+<B><u>OUTPUT</u></B>
+Enter a string: programming
+Reversed string: gnimmargorp
+
+<b>Question 10: Enter the string from user and enter a character , it is exist or not ?</b>
+
+<B><u>SOLUTION</u></B>
+#include < stdio.h >
+
+int main() {
+    char str[100];
+    char ch;
+    int found = 0;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    printf("Enter a character to search: ");
+    scanf(" %c", &ch);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ch) {
+            found = 1;
+            break;  
+      }
+}
+
+    if (found == 1) {
+        printf("The character '%c' exists in the string!\n", ch);
+    } else {
+        printf("The character '%c' does not exist in the string.\n", ch);
+    }
+}
+
+<B><u>OUTPUT</u></B>
+Enter a string: hello
+Enter a character to search: e
+The character 'e' exists in the string!
+
+<b.Question 11: Enter the string from user and enter a character if it is exist then print the bound number ?</b>
+
+<B><u>SOLUTION</u></B>
+#include < stdio.h >
+
+int main() {
+    char str[100];
+    char ch;
+    int found = -1;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    printf("Enter a character to find: ");
+    scanf(" %c", &ch);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ch) {
+            found = i;
+            break; 
+        }
+    }
+
+    if (found != -1) {
+        printf("Character '%c' found at bound number: %d\n", ch, found);
+    } else {
+        printf("Character '%c' does not exist in the string.\n", ch);
+    }
+}
+
+<B><u>OUTPUT</u></B>
+Enter a string: apple
+Enter a character to find: z
+Character 'z' does not exist in the string.
+
+<b>Question 12: Enter the string from user and count all vowels ?</b>
+
+<B><u>SOLUTION</u></B>
+#include < stdio.h  >
+
+int main() {
+    char str[100];
+    int count = 0;
+
+    printf("Enter a string: ");
+    scanf("%s" , &str);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' ||
+            str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U') {
+            count++;
+      }
+}
+    printf("number of vowels: %d\n", count);
+}
+
+<B><u>OUTPUT</u></B>
+Enter a string: Hello World
+number of vowels: 3
+
+<b>Question 13: Enter the data from user the data consist of roll no. ,name ,class , marks of 5 subjects ?</b>
+
+<b><u>SOLUTION:</b></u>
+#include < stdio.h >
+# include < string.h >
+void main(){    
+    int rollno; 
+    char name[50]; 
+    char classname[10]; 
+    float sub1, sub2, sub3, sub4, sub5; 
+    
+    printf("Enter Student Details\n"); 
+    printf("Enter Roll Number: "); 
+    scanf("%d", &rollno); 
+    
+    printf("Enter Name: "); 
+    scanf("%s", name); 
+    
+    printf("Enter Class: "); 
+    scanf("%s", classname); 
+    
+    printf("Enter marks for 5 subjects :\n"); 
+    scanf("%f", &sub1); 
+    scanf("%f", &sub2); 
+    scanf("%f", &sub3); 
+    scanf("%f", &sub4); 
+    scanf("%f", &sub5); 
+}
+
+<B><u>OUTPUT</u><B/>
+Enter Student Details
+Enter Roll Number: 101
+Enter Name: Rahul
+Enter Class: 10A
+Enter marks for 5 subjects :
+85
+90
+78
+88
+92
+
+</p></pre>
+</body>
+</html>
+

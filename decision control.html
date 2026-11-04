@@ -1,0 +1,465 @@
+.<html>
+<head>
+<title>Decision Control Structure</title>
+<style>
+body{
+background-color: #1E90FF;
+font-family:"georgia";
+}
+h1,h3{
+color:white;
+}
+p{
+color:white;
+font-size:24px;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align : center;"><u>Decision Control Structure </u></h1>
+<h3 style="text-align : center;"><u>Practice Questions</u></h3>
+<pre>
+<p> <b>Question 1: Write a program to enter the number from the user and check it is positive or negative or 0 (zero) ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+   int num;
+   printf("Enter a number: ");
+   scanf("%d", &num)
+ if (num > 0) {
+        printf("The number %d is POSITIVE.\n", num);
+} 
+    else if (num < 0) {
+        printf("The number %d is NEGATIVE.\n", num);
+} 
+    else {
+        printf("The number is ZERO.\n");
+   }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter a number: 25
+The number 25 is POSITIVE.
+
+<b>Question 2: Enter a number from user and check it is odd or even ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+   int num;
+   printf("Enter a number: ");
+   scanf("%d", &num);
+if (num % 2 == 0) {
+        printf("%d is an Even number.\n", num); }
+else {
+        printf("%d is an Odd number.\n", num);
+   }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter an integer: 15
+15 is an Odd number.
+
+<b>Question 3: Enter a number from the user and check that it is of 1 digit or 2 digit or 3 digit or 4 digit or 5 digit ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include< conio.h >
+void main() {
+  int num;
+  printf("Enter a number: ");
+  scanf("%d", &num);
+if (num >= 0 && num <= 9) {
+   printf("%d is a 1-digit number.\n", num);
+} 
+else if (num >= 10 && num <= 99) {
+    printf("%d is a 2-digit number.\n", num);
+} 
+else if (num >= 100 && num <= 999) {
+    printf("%d is a 3-digit number.\n", num);
+} 
+else if (num >= 1000 && num <= 9999) {
+    printf("%d is a 4-digit number.\n", num);
+} 
+else if (num >= 10000 && num <= 99999) {
+    printf("%d is a 5-digit number.\n", num);
+} 
+else {
+        printf("The number is invalid.\n");
+   }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter a number: 365
+365 is a 3-digit number
+
+<b>Question 4:Enter a number from the user if the number is between 0 to 40 then we will print fail if the number is between 40 to 60 then we will print C grade ,if the number is between 60 to 80 than we will print B grade ,if the number is between 80 to 100 then we will print A grade and rest all number are invalid ?</b>
+
+<b><u>SOLUTION: </u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+int marks;
+  printf("Enter marks: ");
+  scanf("%d", &marks);
+if (marks >= 0 && marks< 40) {
+ printf("Fail\n");
+} 
+else if (marks >= 40 && marks < 60) {
+  printf("C grade\n");
+} 
+else if (marks >= 60 && marks< 80) {
+  printf("B grade\n");
+} 
+else if (marks >= 80 && marks <= 100) {
+  printf("A grade\n");
+} 
+else {
+   printf("Invalid\n");
+   }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter marks: 52
+C grade
+
+<b>Question 5:Enter a number from the user if it is a negative then convert into positive and if it is positive then convert into negative often that print the number ?
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+   int number;
+   printf("Enter a number: ");
+   scanf("%d", &number);
+if (number < 0) {
+number = number * -1;
+} 
+else {
+number = number * -1;
+}
+printf("The final number is: %d\n", number);
+}
+
+<b><u>OUTPUT:</u></b>
+Enter a number: 42
+The final number is: -42
+
+<b>Question 6: Enter a character from the user and check that it is an alphabet ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include< conio.h >
+void main() {
+   char ch;
+   printf("Enter a character: ");
+   scanf("%c", &ch);
+   if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+   printf("'%c' is an alphabet.\n", ch);
+} 
+else {
+   printf("'%c' is NOT an alphabet.\n", ch);
+    }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter a character: g
+'g' is an alphabet
+
+<b>Question 7: Enter a number from the user if the number is negative then square the number and if it is positive then increment the number 20 times ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+if (number < 0) {
+  int square = number * number;
+   printf("The number is negative.\n");
+     printf("Square of the number is: %d\n", square);
+} 
+else {
+    printf("The number is positive.\n");
+      printf( "original number: %d\n", number);
+int count = 0;
+while (count < 20) {
+  number = number + 1;
+    count = count + 1; 
+}
+printf("Value after incrementing 20 times: %d\n", number);
+    }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter a number: -5
+The number is negative.
+Square of the number is: 25
+
+<b>Question 8: Enter the number from the user it the number is negative or positive and find out of that number ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+  int number;
+  printf("Enter a number: ");
+  scanf("%d", &number);
+if (number > 0) {
+printf("%d is a POSITIVE number.\n", number);
+    } 
+else if (number < 0) {
+printf("%d is a NEGATIVE number.\n", number);
+    } 
+else {
+printf("The number is ZERO.\n");
+    }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter a number: 15
+15 is a POSITIVE number.
+
+<b>Question 9: Enter two number from user and check which is the greater number and print the greater number ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+  int num1, num2;
+  printf("Enter the first number: ");
+  scanf("%d", &num1);
+  printf("Enter the second number: ");
+  scanf("%d", &num2);
+if (num1 > num2) {
+printf("The greater number is: %d\n", num1);
+} 
+else if (num2 > num1) {
+printf("The greater number is: %d\n", num2);
+} 
+else {
+printf("Both numbers are equal.\n");
+    }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter the first number: 15
+Enter the second number: 89
+The greater number is: 89
+
+<b>Question 10: Enter a number from user and check it is divisible by 4 or not ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void  main() {
+  int number;
+  printf("Enter a number: ");
+  scanf("%d", &number);
+if (number % 4 == 0) {
+printf("%d is divisible by 4.\n", number);
+    } 
+else {
+printf("%d is not divisible by 4.\n", number);
+    }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter a number: 16
+16 is divisible by 4.
+
+<b>Question 11: Enter a four characters from users and check they are equal or not ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+  char ch[4];
+  for (int i = 0; i < 4; i++) {
+  printf("Enter character %d: \n", i + 1);
+  scanf(" %c", &ch[i]);
+}
+if (ch[0] == ch[1] && ch[1] == ch[2] && ch[2] == ch[3]) {
+  printf("\nAll characters are equal!\n");
+}
+else {
+printf("\nThe characters are not equal.\n");
+    }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter character 1: 
+a
+Enter character 2: 
+a
+Enter character 3: 
+a
+Enter character 4: 
+a
+
+All characters are EQUAL!
+
+<b>Question 12: Enter three numbers from users and tell which is greater ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+  int num1, num2, num3;
+  printf("Enter the first number: ");
+  scanf("%d", &num1);
+  printf("Enter the second number: ");
+  scanf("%d", &num2);
+  printf("Enter the third number: ");
+  scanf("%d", &num3);
+if (num1 >= num2 && num1 >= num3) {
+   printf("%d is the greatest number.\n", num1);
+} 
+else if (num2 >= num1 && num2 >= num3) {
+   printf("%d is the greatest number.\n", num2);
+} 
+else {
+   printf("%d is the greatest number.\n", num3);
+    }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter the first number: 25
+Enter the second number: 50
+Enter the third number: 12
+50 is the greatest number.
+
+<b>Question 13: Enter a number from the user if the user enters 30 then print the month in which we have 30 days. If the enter 31 then print the month 31 days for 28, 29 print the month else everything is invalid ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+  int days;
+  printf("Enter number of days (28-31): ");
+  scanf("%d", &days);
+switch (days) { 
+        case 28:
+            printf("Month of 28 days: February\n");
+            break;
+        case 29: 
+            printf("Month of 29 days: February (leap year)\n");
+            break;
+        case 30: 
+            printf("Months of 30 days: April, June, September, November\n");
+            break;
+        case 31: 
+            printf("Months of 31 days: January, March, May, July, August, October, December\n");
+            break;
+        default:
+            printf("Invalid choice\n");
+            break;
+    }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter number of days (28-31): 31
+Months of 31 days: January, March, May, July, August, October, December
+
+<b> Question 14: Enter one digit number from user and print in words ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+   int number;
+   printf("Enter a single digit number (0-9): ");
+   scanf("%d", &number);
+switch (number) {
+        case 0:
+            printf("Zero\n");
+            break;
+        case 1:
+            printf("One\n");
+            break;
+        case 2:
+            printf("Two\n");
+            break;
+        case 3:
+            printf("Three\n");
+            break;
+        case 4:
+            printf("Four\n");
+            break;
+        case 5:
+            printf("Five\n");
+            break;
+        case 6:
+            printf("Six\n");
+            break;
+        case 7:
+            printf("Seven\n");
+            break;
+        case 8:
+            printf("Eight\n");
+            break;
+        case 9:
+            printf("Nine\n");
+            break;
+        default:
+      printf("Invalid choice\n");
+            break;
+    }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter a single digit number (0-9): 5
+Five
+
+<b>Question 15:Enter a character from user and it is in upper case, lower case, special characters or numbers ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+void main() {
+  char ch;
+  printf("Enter any character: ");
+   scanf("%c", &ch);
+if (ch >= 'A' && ch <= 'Z') {
+      printf("'%c' is an UPPERCASE alphabet.\n", ch);
+}
+else if (ch >= 'a' && ch <= 'z') {
+      printf("'%c' is a LOWERCASE alphabet.\n", ch);
+}
+else if (ch >= '0' && ch <= '9') {
+      printf("'%c' is a NUMBER.\n", ch);
+}
+else {
+      printf("'%c' is a SPECIAL CHARACTER.\n", ch);
+   }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter any character: m
+'m' is a LOWERCASE alphabet
+
+<b>Question 16: Enter the year from user and check its leap year or not ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include <stdio.h>
+
+int main() {
+  int year;
+  printf("Enter a year: ");
+  scanf("%d", &year);
+  if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+    printf("%d is a leap year.\n", year);}
+else {
+    printf("%d is not a leap year.\n", year);
+    }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter a year: 2024
+2024 is a leap year.
+</pre>
+<//body>
+</html>

@@ -1,0 +1,365 @@
+<html>
+<head>
+<title>Single Dimension Array</title>
+<style>
+body{
+background-color: #1E90FF;
+font-family:"georgia";
+}
+h1,h3{
+color:white;
+}
+p{
+color:white;
+font-size:24px;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align : center;"><u>Single Dimension Array </u></h1>
+<h3 style="text-align : center;"><u>Practice Questions</u></h3>
+<pre>
+<p> <b>Question 1: Enter an array from user and display all the value ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include< stdio.h >
+#include< conio.h >
+void main() {
+int arr[3];
+printf("Enter 3 numbers:\n");
+scanf("%d", &arr[0]);
+scanf("%d", &arr[1]);
+scanf("%d", &arr[2]);
+
+printf("First Value: %d\n", arr[0]);
+printf("Second Value: %d\n", arr[1]);
+printf("Third value: %d\n", arr[2]);
+}
+
+<b><u>OUTPUT:</u></b>
+Enter 3 numbers:
+10
+20
+30
+
+First Value: 10
+Second Value: 20
+Third value: 30 
+
+<b>Question 2: Enter an array from user and print the array in reverse order ?</b>>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+int numbers[5];
+int i;
+printf("Enter 5 numbers:\n");
+for (i = 0; i < 5; i++) {
+printf("Number : ", i + 1);
+scanf("%d", &numbers[i]);
+}
+printf("\nThe array in reverse order is:\n");
+for (i = 4; i >= 0; i--) {
+printf("%d ", numbers[i]);
+}
+printf("\n");
+}
+
+<b><u>OUTPUT:</u></b>
+Enter 5 numbers:
+Number : 10
+Number : 20
+Number : 30
+Number : 40
+Number : 50
+
+The array in reverse order is:
+50 40 30 20 10
+
+<b>Question 3:Enter an array from user and copy the array into second array ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio .h >
+void main() {
+int arr1[5]; 
+int arr2[5]; 
+int i;
+printf("Enter 5 values:\n");
+for (i = 0; i < 5; i++) {
+printf("Values : ", i + 1);
+scanf("%d", &arr1[i]);
+} 
+for (i = 0; i < 5; i++) {
+arr2[i] = arr1[i];
+}
+printf("\n values of the second array : \n");
+for (i = 0; i < 5; i++) {
+printf("arr2[%d] = %d\n", i, arr2[i]);
+    }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter 5 values:
+values : 10
+values : 20
+values : 30
+values : 40
+values : 50
+
+values of the second array : 
+arr2[0] = 10
+arr2[1] = 20
+arr2[2] = 30
+arr2[3] = 40
+arr2[4] = 50
+
+<b>Quuestion 5: Enter an array from user and print the number which is even ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h  >
+void main() {
+int arr[5];
+int i;
+printf("Enter 5 numbers:\n");
+for (i = 0; i < 5; i++) {
+printf("Number %d: ", i + 1);
+scanf("%d", &arr[i]);
+}
+printf("\nEven numbers in the array are:\n");
+for (i = 0; i < 5; i++) {
+if (arr[i] % 2 == 0) {
+printf("%d ", arr[i]);
+    }
+  }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter 5 numbers:
+Number 1: 12
+Number 2: 7
+Number 3: 8
+Number 4: 15
+Number 5: 20
+
+Even numbers in the array are:
+12 8 20 
+
+<b>Question 6: Enter an array from user and print the number which is positive ?</b>
+
+<b><u>SOLUTION: </u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+int arr[5];
+int i;
+printf("Enter 5 numbers:\n");
+  for (i = 0; i < 5; i++) {
+     printf("Number%d: ", i + 1);
+      scanf("%d", &arr[i]);
+}
+printf("\nPositive numbers in the array are:\n");
+    for (i = 0; i < 5; i++) {
+        if (arr[i] > 0) { 
+            printf("%d ", arr[i]);
+      }
+   }
+}
+
+<b><u>OUTPUT:</u></b>
+Enter 5 numbers:
+Number 1: -6
+Number 2: 14
+Number 3: 0
+Number 4: 9
+Number 5: -3
+
+Positive numbers in the array are:
+14 9
+
+<b>Question 7: Enter an array from user and square all the values of array ?</b>
+
+<b><u>SOLUTION : </u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+int numbers[5];
+int i;
+printf("Enter 5 numbers:\n");
+ for(i = 0; i < 5; i++) {
+    printf("Number %d: ", i + 1);
+      scanf("%d", &numbers[i]);
+}
+ for(i = 0; i < 5; i++) {
+     numbers[i] = numbers[i] * numbers[i]; 
+}
+printf("\nSquare of all values are:\n");
+    for(i = 0; i < 5; i++) {
+        printf("%d ", numbers[i]);
+}
+    printf("\n");
+}
+
+<b><u>OUTPUT:</u></b>
+Enter 5 numbers:
+Number 1: 2
+Number 2: 4
+Number 3: 9
+Number 4: 6
+Number 5: 10
+
+Square of all values are:
+4 16 81 36 100 
+
+<b>Question 8: Enter 5 values of array from user and print odd number of array ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+int arr[5]; 
+int i;
+printf("Enter 5 numbers:\n");
+  for (i = 0; i < 5; i++) {
+     printf("Number %d: ", i + 1);
+        scanf("%d", &arr[i]);
+}
+printf("\nOdd numbers in the array are:\n");
+   for (i = 0; i < 5; i++) {
+       if (arr[i] % 2 != 0) { 
+           printf("%d ", arr[i]);
+      }
+ }
+    printf("\n");  
+}
+
+<b><u>OUTPUT:</u></b>
+Enter 5 numbers:
+Number 1: 10
+Number 2: 7
+Number 3: 8
+Number 4: 17
+Number 5: 12
+
+Odd numbers in the array are:
+7 15 
+
+<b>Question 9:Enter 5 values of array from user and add all values ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+int numbers[5];
+int sum = 0;
+int i;
+printf("Enter 5 numbers:\n");
+  for(i = 0; i < 5; i++) {
+     printf("Enter value %d: ", i + 1);
+       scanf("%d", &numbers[i]);
+ }
+ for(i = 0; i < 5; i++) {
+     sum = sum + numbers[i];
+}
+printf("\nThe sum of all the values in the array is: %d\n", sum);
+}
+
+<b><u>OUTPUT:</u></b>
+Enter 5 numbers:
+Enter value 1: 10
+Enter value 2: 20
+Enter value 3: 5
+Enter value 4: 16
+Enter value 5: 40
+
+The sum of all the values in the array is: 91
+
+<b>Question 10: Enter 5 values of array from user, enter a value from user and search this value in array, if value is found then print “found” or not then print “not found”?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+int arr[5];
+int i, value;
+int found = 0;
+printf("Enter 5 numbers:\n");
+   for(i = 0; i < 5; i++) {
+      printf("Number %d: ", i + 1);
+        scanf("%d", &arr[i]);
+}
+printf("\nEnter a value to search: ");
+scanf("%d", &value);
+   for(i = 0; i < 5; i++) {
+       if(arr[i] == value) {
+            found = 1; 
+            break;    
+     }
+}
+if(found == 1) {
+  printf("found\n");{
+ else 
+{
+  printf("not found\n");}
+}
+
+<b><u>OUTPUT:</u></b>
+Enter 5 numbers:
+Number 1: 10
+Number 2: 25
+Number 3: 47
+Number 4: 8
+Number 5: 99
+
+Enter a value to search: 47
+found
+
+<b>Question 12:Find maximum values of array ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+void main() {
+int numbers[5] = {12, 45, 7, 92, 31};
+int max = numbers[0];
+    for (int i = 1; i < 5; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+   }
+}
+printf("The maximum value in the array is: %d\n", max);
+}
+
+<b><u>OUTPUT:</u></b>
+The maximum value in the array is: 92
+
+<b>Question 13:Find minimum values of array ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+#include < conio.h >
+int main() {
+int numbers[5] = {23, 5, 89, 2, 45};
+int min = numbers[0];
+for (int i = 1; i < 5; i++) {
+  if (numbers[i] < min) {
+           min = numbers[i];
+    }
+}
+printf("The minimum value in the array is: %d\n", min);
+}
+
+<b><u>OUTPUT:</u></b>
+The minimum value in the array is: 2
+</pre>
+</body>
+</html>
+
+
+
+
+
+
+

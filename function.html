@@ -1,0 +1,253 @@
+<html>
+<head>
+<title>Functions</title>
+<style>
+body{
+background-color: #1E90FF;
+font-family:"georgia";
+}
+h1,h3{
+color:white;
+}
+p{
+color:white;
+font-size:24px;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align : center;"><u>FUNCTIONS</u></h1>
+<h3 style="text-align : center;"><u>Practice Questions</u></h3>
+<pre><p>
+<b>Question 1: Write a program to enter 2 number from the users add them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user add them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user add them and display the answer ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+void add() {
+    int num1, num2;
+    printf("\nAddition\n");
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    printf("Answer: %d + %d= %d\n", num1, num2, num1 + num2);
+}
+
+void subtract() {
+    int num1, num2;
+    printf("\nSubtraction\n");
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    printf("Answer: %d - %d = %d\n", num1, num2, num1 - num2);
+}
+
+void multiply() {
+    int num1, num2;
+    printf("\nMultiplication\n");
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    printf("Answer: %d * %d = %d\n", num1, num2, num1 * num2);
+}
+
+void divide() {
+    int num1, num2;
+    printf("\nDivision\n");
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    printf("Answer: %d/ %d = %d\n", num1, num2, num1 / num2);
+}
+
+int main() {
+    add();        
+    subtract();    
+    add();      
+    multiply();   
+    subtract();   
+    multiply();    
+    divide(); 
+    divide();    
+    add();        
+}
+
+<b><u>OUTPUT:</u></b>
+Addition
+Enter first number: 10
+Enter second number: 5
+Answer: 10 + 5= 15
+
+Subtraction
+Enter first number: 20
+Enter second number: 4
+Answer: 20 - 4 = 16
+
+Addition
+Enter first number: 8
+Enter second number: 2
+Answer: 8 + 2= 10
+
+Multiplication
+Enter first number: 6
+Enter second number: 3
+Answer: 6 * 3 = 18
+
+Subtraction
+Enter first number: 15
+Enter second number: 5
+Answer: 15 - 5 = 10
+
+Multiplication
+Enter first number: 4
+Enter second number: 5
+Answer: 4 * 5 = 20
+
+Division
+Enter first number: 12
+Enter second number: 3
+Answer: 12/ 3 = 4
+
+Division
+Enter first number: 20
+Enter second number: 5
+Answer: 20/ 5 = 4
+
+Addition
+Enter first number: 1
+Enter second number: 1
+Answer: 1 + 1= 2
+
+<b>Question 2: Write a program to enter 10 number from the user add the number and display the answer ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+int addNumbers() {
+    int sum = 0;
+    int num;
+    
+    printf("Enter 10 numbers:\n");
+    
+    for (int i = 1; i <= 10; i++) {
+        printf("Number %d: ", i);
+        scanf("%d", &num);
+        sum = sum + num;
+    }
+    
+    return sum; 
+}
+
+int main() {
+    int totalSum = addNumbers(); 
+    
+    printf("\nThe total sum is: %d\n", totalSum);
+}
+
+<b><u>OUTPUT</u></b>
+Please enter 10 numbers:
+Number 1: 5
+Number 2: 10
+Number 3: 2
+Number 4: 8
+Number 5: 3
+Number 6: 1
+Number 7: 4
+Number 8: 6
+Number 9: 7
+Number 10: 9
+
+The total sum is: 55
+
+<b>Question 3: Write a program to return an array from function ?</b>
+
+<b><u>SOLUTION:</u></b>
+#include < stdio.h >
+  int*Numbers() {
+ int myNumbers[3] = {10, 20, 30}; 
+}
+void main() {
+    int* ptr;
+    ptr= Numbers();
+    printf("Element at index 0: %d\n", ptr[0]);
+    printf("Element at index 1: %d\n", ptr[1]);
+    printf("Element at index 2: %d\n", ptr[2]);
+}
+
+<b><u>OUTPUT:</u></b>
+Element at index 0: 10
+Element at index 1: 20
+Element at index 2: 30
+
+<b>Question 5: Swap numbers using Call by address ?</b>
+<u>SOLUTION</u>
+#include < stdio.h >
+void swap(int *a, int *b) {
+    int value;
+    value = *a;   
+    *a = *b;     
+    *b = value; 
+}
+int main() {
+    int x = 10;
+    int y = 20;
+
+    printf("Before swapping: x = %d, y = %d\n", x, y);
+    swap(&x, &y);
+
+    printf("After swapping: x = %d, y = %d\n", x, y);
+}
+
+<b><u>OUTPUT</u></b>
+Before swapping: x = 10, y = 20
+After swapping: x = 20, y = 10
+
+<b>Question 4: Swap numbers using Call by function ?</b>
+
+<b><u>SOLUTION</u></b>
+#include < stdio.h >
+void swap(int *a, int *b) {
+    int value;
+   value= *a;
+    *a = *b;   
+    *b = value; 
+}
+
+int main() {
+    int num1 = 10;
+    int num2 = 20;
+
+    printf("Before swapping: num1 = %d, num2 = %d\n", num1, num2);
+    swap(&num1, &num2);
+
+    printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+}
+
+<b><u>OUTPUT</u></b>
+Before swapping: num1 = 10, num2 = 20
+After swapping: num1 = 20, num2 = 10
+
+<b>Question 5: Make function for find out Cube a user entered number ?</b>
+
+<b><u>SOLUTION</u></b>
+#include < stdio.h >
+int Cube(int num) {
+    return num * num * num;
+}
+int main() {
+    int number, result;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    result = findCube(number);
+    printf("The cube of %d is: %d\n", number, result);
+}
+
+<b><u>OUTPUT</u></b>
+Enter a number: 5
+The cube of 5 is: 125
+</p></pre>
+</body>
+</html>

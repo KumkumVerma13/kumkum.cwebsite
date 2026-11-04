@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Recursion</title>
+<style>
+body{
+background-color: #1E90FF;
+font-family:"georgia";
+}
+h1,h3{
+color:white;
+}
+p{
+color:white;
+font-size:24px;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align : center;"><u>Recursion </u></h1>
+<h3 style="text-align : center;"><u>Practice Questions</u></h3>
+<pre><p>
+<b>Question 1: Write a program of recursion and display the output?</b>
+
+<b><u>Solution:</u></b>
+#include < stdio.h >
+
+int i = 1; 
+
+void display() {
+    if (i <= 5) {
+        printf("%d ", i); 
+        i++;          
+        display();  
+    }
+}
+
+int main() {
+    display();
+   }
+<b><u>Output:</u></b>
+1 2 3 4 5
+ 
+<b>Question 2:Write a program of recursion with global variable and display the output.</b>
+
+<u><b>Solution:</b></u>
+#include < stdio.h >
+int count = 1; 
+
+void printHello() {
+    if (count > 3) {
+        return;
+    }
+    printf("Hello world\n", count);
+    count++; 
+    printHello();
+}
+
+int main() {
+    printHello();
+}
+
+<u><b>Output:</u></b>
+Hello world
+Hello world
+Hello world
+
+<b>Question:3 Write a program of recursion with local variable and display the output.</b>
+
+<u><b>Solution:</b></u>
+#include< stdio.h >
+#include< conio.h >
+
+void fun(int n)
+{
+    int a = n;
+     if(n > 0)
+    {
+        printf("%d\n", a);
+        fun(n / 2);
+    }
+}
+
+void main()
+{
+    clrscr();
+    fun(8);
+}
+
+<u><b>Output</u></b>
+8
+4
+2
+1
+</p></pre>
+</body>
+</html>

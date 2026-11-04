@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>Structures</title>
+<style>
+body{
+background-color: #1E90FF;
+font-family:"georgia";
+}
+h1,h3{
+color:white;
+}
+p{
+color:white;
+font-size:24px;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align : center;"><u>Structures</u></h1>
+<h3 style="text-align : center;"><u>Practice Questions</u></h3>
+<pre><p>
+<b>Question 1: Create structure of employee which there is emp.ID, name, designation of 50 employees from user, print details in tabular form ?</b>
+
+<u><b>Solution:</b></u>
+#include < stdio.h >
+#include < conio.h >
+
+struct employee
+{
+    int id;
+    char name[20];
+    char designation[20];
+};
+
+void main()
+{
+    struct employee emp[50];
+    int i;
+
+    clrscr();
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("\nEnter ID: ");
+        scanf("%d", &emp[i].id);
+
+        printf("Enter Name: ");
+        scanf("%s", emp[i].name);
+
+        printf("Enter Designation: ");
+        scanf("%s", emp[i].designation);
+    }
+
+    printf("\nID\tName\tDesignation");
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("\n%d\t%s\t%s",
+        emp[i].id, emp[i].name, emp[i].designation);
+    }
+}
+
+<u><b>Output</b></u>
+Enter ID: 101
+Enter Name: Rahul
+Enter Designation: Manager
+
+Enter ID: 102
+Enter Name: Aman
+Enter Designation: Clerk
+
+ID      Name    Designation
+101     Rahul   Manager
+102     Aman    Clerk
+
+<b>Question 2: Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print only name of the employee ?</b>
+
+<u><b>Solution:</b></u>
+#include < stdio.h >
+#include < conio.h >
+
+struct employee
+{
+    int id;
+    char name[20];
+    char designation[20];
+};
+
+void main()
+{
+    struct employee emp[50];
+    int i;
+
+    clrscr();
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("\nEnter ID: ");
+        scanf("%d", &emp[i].id);
+
+        printf("Enter Name: ");
+        scanf("%s", emp[i].name);
+
+        printf("Enter Designation: ");
+        scanf("%s", emp[i].designation);
+    }
+
+    printf("\nEmployee Names:\n");
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("%s\n", emp[i].name);
+    }
+}
+
+<b><u>Output</b></u>
+Enter ID: 101
+Enter Name: Rahul
+Enter Designation: Manager
+
+Enter ID: 102
+Enter Name: Aman
+Enter Designation: Clerk
+
+Employee Names:
+Rahul
+Aman
+
+<b>Question 3: Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print name character with emp.ID in tabular form ?</b>
+
+<b><u>Solution:</b></u>
+#include < stdio.h >
+#include < conio.h >
+
+struct employee
+{
+    int id;
+    char name[20];
+    char designation[20];
+};
+
+void main()
+{
+    struct employee emp[50];
+    int i;
+
+    clrscr();
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("\nEnter ID: ");
+        scanf("%d", &emp[i].id);
+
+        printf("Enter Name: ");
+        scanf("%s", emp[i].name);
+
+        printf("Enter Designation: ");
+        scanf("%s", emp[i].designation);
+    }
+
+    printf("\nID\tName");
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("\n%d\t%s", emp[i].id, emp[i].name);
+    }
+}
+
+<b><u>Output:</u></b>
+Enter ID: 101
+Enter Name: Rahul
+Enter Designation: Manager
+
+Enter ID: 102
+Enter Name: Aman
+Enter Designation: Clerk
+
+ID      Name
+101     Rahul
+102     Aman
+</p></pre>
+</body>
+</html>
